@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 移动端meta设置 -->
+  <meta content="page-content" name="activity.mainstory">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 禁止微信内置X5横屏 -->
+  <meta name="x5-orientation" content="portrait">
+
+  <title>signup</title>
+
+  <!-- 主要css加载 -->
+  <link rel="stylesheet" href="common/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/font-awesome/css/font-awesome.min.css">
+
+
+  <!-- 主要js加载 -->
+  <script src="common/jquery.min.js"></script>
+  <script src="common/fastclick.js"></script>
+  <script src="common/bscroll.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body id="signupPage">
+  <div class="select-top-nav">
+    <span data-name="designer" class="active designer-btn">设计师</span>
+    <span data-name="buyer" class="buyer-btn">买手</span>
+  </div>
+  <!-- 设计师表单 -->
+  <div class="designer-form form-box">
+    <!--  -->
+    <div class="clearfix input-row">
+      <label for="">姓名</label>
+      <div class="input-wrapper">
+        <input type="text" name="" value="">
+      </div>
+    </div>
+    <div class="clearfix input-row">
+      <label for="">邮箱</label>
+      <div class="input-wrapper">
+        <input type="email" name="" value="">
+      </div>
+    </div>
+    <div class="clearfix input-row">
+      <label for="">手机</label>
+      <div class="input-wrapper">
+        <input type="tel" name="" value="">
+      </div>
+    </div>
+    <div class="clearfix input-row">
+      <label for="">所在城市</label>
+      <div class="input-wrapper">
+        <input type="text" name="city" value="" readonly="ture" onfocus="this.blur()">
+        <i class="fa fa-caret-down select-city" aria-hidden="true"></i>
+      </div>
+    </div>
+    <!--  -->
+    <div class="tit-line">
+      <sapn class="tit-text">至少选择一种作品展示方式</sapn>
+      <span class="line"></span>
+    </div>
+
+    <div class="clearfix input-row">
+      <label for="">个人主页</label>
+      <div class="input-wrapper">
+        <input type="url" name="" value="" placeholder="个人主页，Behance等">
+      </div>
+    </div>
+    <div class="clearfix input-row">
+      <label for="">设计作品</label>
+      <div class="input-wrapper">
+        <input type="text" name="" value="" readonly="ture" onfocus="this.blur()" placeholder="请上传五张不同项目的作品">
+        <img class="input-icon select-image" src="./image/upload-false.png" alt="">
+      </div>
+    </div>
+    <div class="clearfix input-row">
+      <label for="">你擅长的风格</label>
+      <div class="input-wrapper">
+        <input type="text" name="" value="">
+        <img class="input-icon" src="./image/edit-false.png" alt="">
+      </div>
+    </div>
+    <!--  -->
+    <div class="tit-line">
+      <sapn class="tit-text">个人经历</sapn>
+      <span class="line"></span>
+    </div>
+
+    <div class="select-experience-nav">
+      <span data-name="work" class="active work-btn">工作经历</span>
+      <span data-name="project" class="project-btn">项目经历</span>
+      <span data-name="study" class="study-btn">学习经历</span>
+    </div>
+    <div class="work-tab tab-box">
+      <div class="clearfix input-row">
+        <label for="">公司名</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+
+      <div class="clearfix input-row">
+        <label for="">职位</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+
+      <div class="clearfix input-row">
+        <label for="">在职日期</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+          <img class="input-icon" src="./image/date.png" alt="">
+        </div>
+      </div>
+      <div class="textarea-component">
+        <p>简介</p>
+        <textarea name="name" rows="4"></textarea>
+      </div>
+    </div>
+    <div class="project-tab tab-box display-none">
+      <div class="clearfix input-row">
+        <label for="">项目名</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+
+      <div class="clearfix input-row">
+        <label for="">担任角色</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+
+      <div class="clearfix input-row">
+        <label for="">项目周期</label>
+        <div class="input-wrapper">
+          <input type="date" name="" value="">
+          <img class="input-icon" src="./image/date.png" alt="">
+        </div>
+      </div>
+      <div class="textarea-component">
+        <p>项目介绍</p>
+        <textarea name="name" rows="4"></textarea>
+      </div>
+    </div>
+    <div class="study-tab tab-box display-none">
+      <div class="clearfix input-row">
+        <label for="">学校名称</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+
+      <div class="clearfix input-row">
+        <label for="">专业</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+
+      <div class="clearfix input-row">
+        <label for="">在校日期</label>
+        <div class="input-wrapper">
+          <input type="date" name="" value="">
+          <img class="input-icon" src="./image/date.png" alt="">
+        </div>
+      </div>
+      <div class="textarea-component">
+        <p>简介</p>
+        <textarea name="name" rows="4"></textarea>
+      </div>
+    </div>
+    <!--  -->
+    <div class="read-agree">
+      <p>我已阅读并同意<span class="doc-name">YUNICKID创孩儿设计师规范</span></p>
+      <span class="iphone-btn">
+        <span class="iphone-btn-o"></span>
+      </span>
+    </div>
+    <!--  -->
+    <div class="submit-btn">
+      提交
+    </div>
+  </div>
+
+  <!-- 买手表单 -->
+  <div class="buyer-form form-box display-none">
+    <!--  -->
+    <div class="clearfix input-row">
+      <label for="">姓名</label>
+      <div class="input-wrapper">
+        <input type="text" name="" value="">
+      </div>
+    </div>
+
+    <div class="clearfix input-row">
+      <label for="">公司</label>
+      <div class="input-wrapper">
+        <input type="text" name="" value="">
+      </div>
+    </div>
+
+    <div class="clearfix input-row">
+      <label for="">职位</label>
+      <div class="input-wrapper">
+        <input type="text" name="" value="">
+      </div>
+    </div>
+
+    <div class="clearfix input-row">
+      <label for="">邮箱</label>
+      <div class="input-wrapper">
+        <input type="text" name="" value="">
+      </div>
+    </div>
+
+    <div class="clearfix input-row">
+      <label for="">手机</label>
+      <div class="input-wrapper">
+        <input type="tel" name="" value="">
+      </div>
+    </div>
+
+    <div class="clearfix input-row">
+      <label for="">上传名片</label>
+      <div class="input-wrapper">
+        <input type="text" name="" value="" readonly="ture" onfocus="this.blur()" placeholder="">
+        <img class="input-icon select-people-card" src="./image/upload-false.png" alt="">
+      </div>
+    </div>
+    <div class="push-info">
+      <p>
+        上传公司资料，审核通过获得更多会员权益
+        <i class="fa fa-angle-right"></i>
+      </p>
+    </div>
+    <div class="more-info">
+      <div class="clearfix input-row">
+        <label for="">法人</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+      <div class="clearfix input-row">
+        <label for="">税号</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+      <div class="clearfix input-row">
+        <label for="">公司地址</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+      <div class="clearfix input-row">
+        <label for="">公司类别</label>
+        <div class="input-wrapper">
+          <input type="text" name="companyType" value="" readonly="ture" onfocus="this.blur()">
+          <i class="fa fa-caret-down select-company-type" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="clearfix input-row">
+        <label for="">产品类别</label>
+        <div class="input-wrapper">
+          <input type="text" name="productType" value="" readonly="ture" onfocus="this.blur()">
+          <i class="fa fa-caret-down select-product-type" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="clearfix input-row">
+        <label for="">公司性质</label>
+        <div class="input-wrapper">
+          <input type="text" name="companyProperty" value="" readonly="ture" onfocus="this.blur()">
+          <i class="fa fa-caret-down select-company-property" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="clearfix input-row">
+        <label for="">上传营业执照</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="" readonly="ture" onfocus="this.blur()" placeholder="">
+          <img class="input-icon select-business-licence" src="./image/upload-false.png" alt="">
+        </div>
+      </div>
+      <div class="clearfix input-row">
+        <label for="">上传法人身份证</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="" readonly="ture" onfocus="this.blur()" placeholder="">
+          <img class="input-icon select-IDcard" src="./image/upload-false.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <div class="signup-btn">
+      注册
+    </div>
+    <!--  -->
+  </div>
+
+  <!-- modal蒙版 -->
+  <div class="modal-mask"></div>
+  <!-- 城市选择modal -->
+  <div class="select-modal select-city-modal modal">
+    <div class="top-nav">
+      <span class="cancel">取消</span>
+      <span class="sure">确定</span>
+    </div>
+    <div class="select-box">
+      <div id="country-warp" class="wrap">
+        <ul class="scroll">
+          <li class="selected">中国</li>
+          <li>海外</li>
+        </ul>
+      </div>
+      <div id="province-warp" class="wrap">
+        <ul class="scroll">
+          <li class="selected">北京</li>
+          <li>上海</li>
+          <li>深圳</li>
+          <li>重庆</li>
+          <li>山东</li>
+          <li>山西</li>
+          <li>广州</li>
+          <li>广西</li>
+          <li>黑龙江</li>
+        </ul>
+      </div>
+      <div id="city-warp" class="wrap">
+        <ul class="scroll">
+          <li class="selected">青岛</li>
+          <li>日照</li>
+        </ul>
+      </div>
+      <div class="selected-line">
+      </div>
+    </div>
+  </div>
+  <!-- 作品上传modal -->
+  <div class="upload-image-modal upload-works">
+    <div class="image-box">
+      <div class="image-list">
+        <span class="box upload-btn">
+            <img src="./image/upload-true.png" alt="">
+            <span class="upload-text">上传作品</span>
+        </span>
+        <span class="box add-image-btn">
+            +
+            <input class="add-image-input" type="file" name="up" value="" accept="image/*">
+          </span>
+      </div>
+    </div>
+    <div class="submit-btn">
+      提 交
+    </div>
+  </div>
+  <!-- 名片上传modal -->
+  <div class="upload-image-modal upload-card upload-people-card">
+    <div class="image-box">
+      <div class="image-list">
+        <span class="box upload-btn">
+            <img src="./image/upload-true.png" alt="">
+            <span class="upload-text">个人名片</span>
+            <input data-name="peopleCard" class="add-image-input" type="file" name="peopleCard" value="" accept="image/*">
+        </span>
+      </div>
+    </div>
+    <div class="submit-btn">
+      提 交
+    </div>
+  </div>
+  <!-- 营业执照上传modal -->
+  <div class="upload-image-modal upload-business-licence">
+    <div class="image-box">
+      <div class="image-list">
+        <span class="box upload-btn">
+            <img src="./image/upload-true.png" alt="">
+            <span class="upload-text">上传营业执照</span>
+        </span>
+        <span class="box add-image-btn">
+            +
+            <input class="add-image-input" type="file" name="up" value="" accept="image/*">
+          </span>
+      </div>
+    </div>
+    <div class="submit-btn">
+      提 交
+    </div>
+  </div>
+  <!-- 身份证上传modal -->
+  <div class="upload-image-modal upload-card upload-IDcard">
+    <div class="image-box">
+      <div class="image-list">
+        <span class="box upload-btn">
+            <img src="./image/upload-true.png" alt="">
+            <span class="upload-text">上传身份证<br />正面</span>
+            <input data-name="front" class="add-image-input" type="file" name="IDcard-front" value="" accept="image/*">
+        </span>
+        <span class="box upload-btn">
+            <img src="./image/upload-true.png" alt="">
+            <span class="upload-text">上传身份证<br />背面</span>
+            <input data-name="back" class="add-image-input" type="file" name="IDcard-back" value="" accept="image/*">
+        </span>
+      </div>
+    </div>
+    <div class="submit-btn">
+      提 交
+    </div>
+  </div>
+  <!-- 选择公司类别 -->
+  <div class="select-modal select-one-modal select-company-type-modal modal">
+    <div class="top-nav">
+      <span class="cancel">取消</span>
+      <span class="sure">确定</span>
+    </div>
+    <div class="select-box">
+      <div id="company-type-warp" class="wrap">
+        <ul class="scroll">
+          <li class="selected">百货</li>
+          <li>超市</li>
+          <li>代理商</li>
+          <li>电商</li>
+          <li>加盟商</li>
+        </ul>
+      </div>
+      <div class="selected-line">
+      </div>
+    </div>
+  </div>
+  <!-- 选择产品类别 -->
+  <div class="select-modal select-one-modal select-product-type-modal modal">
+    <div class="top-nav">
+      <span class="cancel">取消</span>
+      <span class="sure">确定</span>
+    </div>
+    <div class="select-box">
+      <div id="product-type-warp" class="wrap">
+        <ul class="scroll">
+          <li class="selected">男装</li>
+          <li>女装</li>
+          <li>童装</li>
+          <li>休闲服</li>
+          <li>配饰</li>
+        </ul>
+      </div>
+      <div class="selected-line">
+      </div>
+    </div>
+  </div>
+  <!-- 选择业务性质 -->
+  <div class="select-modal select-one-modal select-company-property-modal modal">
+    <div class="top-nav">
+      <span class="cancel">取消</span>
+      <span class="sure">确定</span>
+    </div>
+    <div class="select-box">
+      <div id="company-property-warp" class="wrap">
+        <ul class="scroll">
+          <li class="selected">代理加盟</li>
+          <li>采购订货</li>
+          <li>经营场所招商</li>
+          <li>寻找配套服务</li>
+          <li>市场调研</li>
+        </ul>
+      </div>
+      <div class="selected-line">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

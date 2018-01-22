@@ -1,0 +1,726 @@
+$(document).ready(function() {
+
+  //移动端处理click300ms延迟
+  if ('addEventListener' in document) {
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body);
+    }, {
+      passive: false
+    });
+  }
+
+  // 记住密码样式切换
+  $(".remember-password").click(function(event) {
+    $(".remember-password .select-true").toggleClass('visibility-hidden');
+  });
+
+  //btn
+  $(".iphone-btn-o").click(function(event) {
+    if ($(this).parent().hasClass('active')) {
+      $(this).parent().removeClass('active');
+      $(this).css('left', '1vw');
+      $(this).parent().css('background-color', 'rgb(189, 189, 189)');
+    } else {
+      $(this).parent().addClass('active');
+      $(this).css('left', '5vw');
+      $(this).parent().css('background-color', 'rgb(172, 156, 131)');
+    }
+  });
+
+  // 登陆提交json
+  $(".login-btn").click(function(event) {
+    var loginInfo = new Object;
+    loginInfo.account = $("input[name='account']").val();
+    loginInfo.password = $("input[name='password']").val();
+    if (!$(".remember-password .select-true").hasClass('visibility-hidden')) {
+      loginInfo.remember = "true";
+    }
+    console.log(loginInfo);
+  });
+
+  //发用验证码
+  $(".verification").click(function(event) {
+    var jqDom = $(this);
+    jqDom.css('background-color', 'rgb(210, 210, 210)');
+    var int = setInterval (runTime, 1000);
+    var num = 120;
+    function runTime()
+  	{
+      if (num != 0) {
+        jqDom.text('验证码已发送('+num+'s)');
+        num --;
+      }else {
+        jqDom.css('background-color', 'rgb(172, 156, 131)');
+        jqDom.text('发送验证码');
+        clearInterval(int);
+      }
+  	}
+  });
+
+  //主页搜索
+  $(".page-top-nav .search-btn").click(function(event) {
+    $(this).addClass('search-active');
+    $(".page-top-nav .wish-icon").css('display', 'none');
+    $(".page-top-nav .top-logo-img").css('display', 'none');
+    $(".page-top-nav .search-input").fadeIn();
+  });
+
+  $(".page-top-nav .search-input i").click(function(event) {
+    $(".page-top-nav .search-btn").removeClass('search-active');
+    $(".page-top-nav .wish-icon").fadeIn();
+    $(".page-top-nav .top-logo-img").fadeIn();
+    $(".page-top-nav .search-input").css('display', 'none');
+  });
+
+  //侧边栏
+  $(".page-top-nav .slider-icon").click(function(event) {
+    $(".slider-box").addClass('slider-box-active');
+    $(".center-body").addClass('overflow-hidden');
+    $(".slider-box .box-right ").addClass('display-block');
+    $(".page-top-nav .slider-icon").css('display', 'none');
+  });
+
+  $(".slider-box .slider-icon-active").click(function(event) {
+    $(".slider-box").removeClass('slider-box-active');
+    $(".center-body").removeClass('overflow-hidden');
+    $(".slider-box .box-right ").removeClass('display-block');
+    $(".page-top-nav .slider-icon").css('display', 'block');
+  });
+  //
+  // $(".slider-box .lv1").click(function(event) {
+  //   event.stopPropagation();
+  //   if ($(this).children('ul').css('display') != 'block') {
+  //     $(".slider-box .slider-list ul").slideUp();
+  //     $(this).children('ul').slideDown();
+  //   }
+  // });
+
+  $(".slider-box .select-box span").click(function(event) {
+    $(this).addClass('selected');
+  });
+
+  $(".slider-box .reset").click(function(event) {
+    $(".select-box span").removeClass('selected');
+  });
+
+  $(".slider-box .lv2").click(function(event) {
+    event.stopPropagation();
+    if ($(this).children('ul').css('display') != 'block') {
+      $(this).siblings().children('ul').slideUp();
+      $(this).children('ul').slideDown();
+    }
+  });
+
+  var textLv1, textLv2, textLv3 = "";
+  $(".slider-box").on('click', ".slider-list .lv3", function(event) {
+
+    var resultText = $(this).text();
+    var lv2Dom = $(this).parent().parent('li');
+    var lv3Dom = $(this).parent().parent().parent().parent('li');
+    if (lv2Dom) {
+      resultText += " " + lv2Dom.children('span').text();
+    }
+    if (lv3Dom) {
+      resultText += " " + lv3Dom.children('span').text();
+    }
+    console.log(resultText);
+    alert(resultText);
+    event.stopPropagation();
+  });
+
+  //地址选择
+  $(".address-list").on('click', '.icon-group .icon-select', function(event) {
+    event.preventDefault();
+    $(".icon-group .icon-select").removeClass('selected');
+    $(this).addClass('selected');
+  });
+
+  //产品筛选
+  $(".product-content .search-tab-show").click(function(event) {
+    if ($(".product-content .search-tab").css('display') == "block") {
+      $(".product-content .search-tab").slideUp();
+    } else {
+      $(".product-content .search-tab").slideDown();
+    }
+  });
+
+  $(".product-content .search-tab span").click(function(event) {
+    $(this).children('i').toggleClass('fa-caret-right');
+    $(this).children('i').toggleClass('fa-caret-down');
+    if ($(this).siblings('ul').css('display') == "block") {
+      $(this).siblings('ul').slideUp();
+    } else {
+      $(".product-content .search-tab ul").slideUp();
+      $(this).siblings('ul').slideDown();
+    }
+
+  });
+
+  // 切换购物袋
+  // $(".wish-top-nav .wish-tab span").click(function(event) {
+  //   $(this).siblings().removeClass('active');
+  //   $(this).addClass('active');
+  //   $(".content-box").addClass('display-none');
+  //   $("." + $(this).data('tab') + "-box").removeClass('display-none');
+  // });
+
+  //购物袋选择
+  $(".shop-sku-list").on('click', '.sku-box .select-circle', function(event) {
+    event.stopPropagation();
+    $(this).toggleClass('select-true');
+  });
+
+  $(".shop-box").on('click', '.shop-tit .all-select', function(event) {
+    event.stopPropagation();
+    $(".sku-box .select-circle").toggleClass('select-true');
+  });
+
+  //SKU 编辑
+  $(".shop-sku-list").on('click', '.sku-box .sku-info .edit-icon', function(event) {
+    $(this).parent().css('display', 'none');
+    $(this).parent().siblings('.edit-sku').css('display', 'inline-block');
+  });
+
+  $(".shop-sku-list").on('click', '.sku-box .edit-sku .finish-btn', function(event) {
+    $(this).parent().css('display', 'none');
+    $(this).parent().siblings('.sku-info').css('display', 'inline-block');
+  });
+
+  $(".shop-sku-list").on('click', '.sku-box .edit-sku .type-select', function(event) {
+    $(this).children(".type-select-list").slideDown();
+  });
+
+  $(".type-select ul").on('click', 'li', function(event) {
+    event.stopPropagation();
+    $(this).parent().parent().siblings('span').text($(this).text());
+    $(this).parent().parent().css('display', 'none');
+  });
+
+  //愿望编辑
+  $(".wish-list").on('click', '.wish-info .edit-icon .delete', function(event) {
+    $(this).parent().parent().parent().fadeOut();
+  });
+
+  // 选择产品尺寸，颜色
+  $(".product-select").click(function(event) {
+    $(this).children('.select-btn').css('display', 'none');
+      $(this).children('.select-box').css('display', 'block');
+  });
+
+  $(".product-select").on('click', '.select-box i', function(event) {
+    event.stopPropagation();
+    $(this).parent().css('display', 'none');
+    $(this).parent().siblings('.select-btn').css('display', 'block');
+  });
+
+  $(".product-select .select-size-ul li").click(function(event) {
+    $(".select-size-ul li").removeClass('selected');
+    $(this).addClass('selected');
+    $(".buy-info .size").text($(this).text());
+  });
+
+  $(".product-select .select-color-ul li").click(function(event) {
+    $(".select-color-ul li").removeClass('selected');
+    $(this).addClass('selected');
+    $(".buy-info .color").text($(this).text());
+  });
+
+  $(".product-select .num-box .add").click(function(event) {
+    var num = parseInt($(".num-box-show .select-num").text());
+    var maxNum = parseInt($(".num-box-show .max-num").text());
+    if (maxNum/10 > num) {
+      num++;
+    }
+    $(".num-box-show .select-num").text(num);
+    $(".buy-info .num").text(num+"手10件");
+  });
+
+  $(".product-select .num-box .down").click(function(event) {
+    var num = parseInt($(".num-box-show .select-num").text());
+    var maxNum = parseInt($(".num-box-show .max-num").text());
+    if (maxNum/10  >= num && num > 1) {
+      num--;
+    }
+    $(".num-box-show .select-num").text(num);
+    $(".buy-info .num").text(num+"手10件");
+  });
+
+  //订单确认地址选择
+  $("#orderPage").on('click', '.buyer-info-box', function(event) {
+    $(".buyer-info-box").removeClass('address-selected');
+    $(this).addClass('address-selected');
+  });
+
+  //选择设计师
+  $(".designer-list").on('click', '.designer-box', function(event) {
+    $(this).siblings('.designer-box').removeClass('active');
+    $(this).addClass('active');
+    $(this).children('.designer-info').children('.designer-name').children('.location-icon-active').css('display', 'block');
+    $(this).children('.to-icon-active').css('display', 'block');
+    $(this).siblings('.designer-box').children('.designer-info').children('.designer-name').children('.location-icon-active').css('display', 'none');
+    $(this).siblings('.designer-box').children('.to-icon-active').css('display', 'none');
+  });
+
+  //设计师收入显示
+  $(".money-icon span").click(function(event) {
+    if ($(".money-box").css('bottom') == "0px") {
+      $(".money-box").css('bottom', '24vw');
+      $(".money-icon").css('bottom', '17vw');
+      $(".work-list").css('margin-top', '27vw');
+      $(".work-list").css('height', '124vw');
+    }else {
+      $(".money-box").css('bottom', '0');
+      $(".money-icon").css('bottom', '0');
+      $(".work-list").css('margin-top', '44vw');
+      $(".work-list").css('height', '107vw');
+    }
+  });
+
+  $(".money-info .fa-eye").click(function(event) {
+
+    $(".money-info .fa-eye").css('display','none');
+    $(".money-info .all-hide").css('display','none');
+    $(".money-info .last-hide").css('display','none');
+
+    $(".money-info .fa-eye-slash").css('display','inline-block');
+    $(".money-info .all-show").css('display','inline-block');
+    $(".money-info .last-show").css('display','inline-block');
+  });
+
+  $(".money-info .fa-eye-slash").click(function(event) {
+    var allNum = $(".money-info .all-show").text().replace(/[0-9]/ig,"*");
+    var lastNum = $(".money-info .last-show").text().replace(/[0-9]/ig,"*");
+    $(".money-info .all-hide").text(allNum);
+    $(".money-info .last-hide").text(lastNum);
+
+    $(".money-info .fa-eye-slash").css('display','none');
+    $(".money-info .all-show").css('display','none');
+    $(".money-info .last-show").css('display','none');
+
+    $(".money-info .fa-eye").css('display','inline-block');
+    $(".money-info .all-hide").css('display','inline-block');
+    $(".money-info .last-hide").css('display','inline-block');
+  });
+
+  //切换买手和设计师
+  // $(".select-top-nav span").click(function(event) {
+  //   $(".select-top-nav span").removeClass('active');
+  //   $("." + $(this).data('name') + "-btn").addClass('active');
+  //   $(".form-box").addClass('display-none');
+  //   $("." + $(this).data('name') + "-form").removeClass('display-none');
+  // });
+
+  //切换经历
+  $(".select-experience-nav span").click(function(event) {
+    $(".select-experience-nav span").removeClass('active');
+    $("." + $(this).data('name') + "-btn").addClass('active');
+    $(".designer-form .tab-box").addClass('display-none');
+    $("." + $(this).data('name') + "-tab").removeClass('display-none');
+  });
+
+  // 选择城市 modal
+  $(".designer-form .select-city").click(function(event) {
+    $(".modal-mask").fadeIn();
+    $(".select-city-modal").fadeIn();
+    countryFun();
+    provinceFun();
+    cityFun();
+  });
+
+  $(".select-city-modal .top-nav .cancel").click(function(event) {
+    $(".modal-mask").fadeOut();
+    $(".select-city-modal").fadeOut();
+  });
+
+  $(".select-city-modal .top-nav .sure").click(function(event) {
+    var cityText = $("#city-warp .selected").text();
+    $(".designer-form input[name='city']").val(cityText);
+    $(".modal-mask").fadeOut();
+    $(".select-city-modal").fadeOut();
+  });
+
+  var countryFun = function() {
+    // 国
+    var countryDom = document.querySelector('#country-warp');
+    countryBS = new BScroll(countryDom, {
+      wheel: {
+        selectedIndex: $("#country-warp .selected").index()
+      }
+    });
+    countryBS.on('scrollEnd', function() {
+      $("#country-warp li").removeClass('selected');
+      $("#country-warp li").eq(countryBS.getSelectedIndex()).addClass('selected');
+    });
+  };
+
+  var provinceFun = function() {
+    // 省
+    var provinceDom = document.querySelector('#province-warp');
+    provinceBS = new BScroll(provinceDom, {
+      wheel: {
+        selectedIndex: $("#province-warp .selected").index()
+      }
+    });
+    provinceBS.on('scrollEnd', function() {
+      $("#province-warp li").removeClass('selected');
+      $("#province-warp li").eq(provinceBS.getSelectedIndex()).addClass('selected');
+    });
+  };
+
+  var cityFun = function() {
+    // 市
+    var cityDom = document.querySelector('#city-warp');
+    cityBS = new BScroll(cityDom, {
+      wheel: {
+        selectedIndex: $("#city-warp .selected").index()
+      }
+    });
+    cityBS.on('scrollEnd', function() {
+      $("#city-warp li").removeClass('selected');
+      $("#city-warp li").eq(cityBS.getSelectedIndex()).addClass('selected');
+    });
+  };
+
+  // 作品图片上传
+  $(".input-row .select-image").click(function(event) {
+    $(".modal-mask").fadeIn();
+    $(".upload-works").fadeIn();
+  });
+  var imageListArr = [];
+  $(".upload-works .add-image-input").change(function(event) {
+    console.log($(this).val());
+    var imgFile = $(this).get(0).files[0];
+    var objecturl = window.URL.createObjectURL(imgFile);
+
+    if (imageListArr.length == 0) {
+      imageListArr.push({
+        name: imgFile.name,
+        file: imgFile,
+        value: $(this).val()
+      });
+      $(".upload-works .image-list").prepend("<span class='box select-img'>" +
+        "<span onclick='' data-image-name=" + imgFile.name + " class='delete-upload-image'><img src='./image/delete.png'/></span>" +
+        "<img src='" + objecturl + "' alt=''>" + "<input name='' style='display:none' type='file' value='" + $(this).val() + "'>" + "</span>");
+    } else {
+      var status = true;
+      for (var i = 0; i < imageListArr.length; i++) {
+        if (imageListArr[i].name == imgFile.name) {
+          status = false;
+        }
+      }
+      if (status) {
+        imageListArr.push({
+          name: imgFile.name,
+          file: imgFile,
+          value: $(this).val()
+        });
+        $(".upload-works .image-list").prepend("<span class='box select-img'>" +
+          "<span onclick='' data-image-name=" + imgFile.name + " class='delete-upload-image'><img src='./image/delete.png'/></span>" +
+          "<img src='" + objecturl + "' alt=''>" + "<input name='' style='display:none' type='file' value='" + $(this).val() + "'>" + "</span>");
+      } else {
+        console.log("相同项");
+      }
+    }
+
+    $(".upload-works .upload-btn").css('display', 'none');
+  });
+
+  $(document).on('click', ".upload-works .select-img .delete-upload-image", function(event) {
+    for (var i = 0; i < imageListArr.length; i++) {
+      if (imageListArr[i].name == $(this).data('image-name')) {
+        imageListArr.splice(i, 1);
+      }
+    }
+    $(this).parent(".select-img").remove();
+  });
+
+  $(".upload-works .submit-btn").click(function(event) { //提交图片
+    console.log(imageListArr);
+    $(".modal-mask").fadeOut();
+    $(".upload-works").fadeOut();
+  });
+
+  // 营业执照上传
+  $(".input-row .select-business-licence").click(function(event) {
+    $(".modal-mask").fadeIn();
+    $(".upload-business-licence").fadeIn();
+  });
+  var licenceListArr = [];
+  $(".upload-business-licence .add-image-input").change(function(event) {
+    console.log($(this).val());
+    var imgFile = $(this).get(0).files[0];
+    var objecturl = window.URL.createObjectURL(imgFile);
+
+    if (licenceListArr.length == 0) {
+      licenceListArr.push({
+        name: imgFile.name,
+        file: imgFile,
+        value: $(this).val()
+      });
+      $(".upload-business-licence .image-list").prepend("<span class='box select-img'>" +
+        "<span onclick='' data-image-name=" + imgFile.name + " class='delete-upload-image'><img src='./image/delete.png'/></span>" +
+        "<img src='" + objecturl + "' alt=''>" + "<input name='' style='display:none' type='file' value='" + $(this).val() + "'>" + "</span>");
+    } else {
+      var status = true;
+      for (var i = 0; i < licenceListArr.length; i++) {
+        if (licenceListArr[i].name == imgFile.name) {
+          status = false;
+        }
+      }
+      if (status) {
+        licenceListArr.push({
+          name: imgFile.name,
+          file: imgFile,
+          value: $(this).val()
+        });
+        $(".upload-business-licence .image-list").prepend("<span class='box select-img'>" +
+          "<span onclick='' data-image-name=" + imgFile.name + " class='delete-upload-image'><img src='./image/delete.png'/></span>" +
+          "<img src='" + objecturl + "' alt=''>" + "<input name='' style='display:none' type='file' value='" + $(this).val() + "'>" + "</span>");
+      } else {
+        console.log("相同项");
+      }
+    }
+    $(".upload-business-licence .upload-btn").css('display', 'none');
+  });
+
+  $(document).on('click', ".upload-business-licence .select-img .delete-upload-image", function(event) {
+    event.preventDefault();
+    for (var i = 0; i < licenceListArr.length; i++) {
+      if (licenceListArr[i].name == $(this).data('image-name')) {
+        licenceListArr.splice(i, 1);
+      }
+    }
+    $(this).parent(".select-img").remove();
+  });
+
+  $(".upload-business-licence .submit-btn").click(function(event) { //提交图片
+    console.log(licenceListArr);
+    $(".modal-mask").fadeOut();
+    $(".upload-business-licence").fadeOut();
+  });
+
+  //身份证图片上传
+  $(".input-row .select-IDcard").click(function(event) {
+    $(".modal-mask").fadeIn();
+    $(".upload-IDcard").fadeIn();
+  });
+  var IDcardListObject = {
+    front: {
+      name: "",
+      file: "",
+      value: ""
+    },
+    back: {
+      name: "",
+      file: "",
+      value: ""
+    }
+  };
+  $(".upload-IDcard .add-image-input").change(function(event) {
+    var imgFile = $(this).get(0).files[0];
+    var objecturl = window.URL.createObjectURL(imgFile);
+    $(this).siblings('.upload-text').css('display', 'none');
+    $(this).siblings('img').attr('src', objecturl).addClass('upload-selected-img');
+    console.log($(this).data('name'));
+    if ($(this).data('name') == 'front') {
+      IDcardListObject.front.name = imgFile.name;
+      IDcardListObject.front.value = $(this).val();
+      IDcardListObject.front.file = imgFile;
+    }
+    if ($(this).data('name') == 'back') {
+      IDcardListObject.back.name = imgFile.name;
+      IDcardListObject.back.value = $(this).val();
+      IDcardListObject.back.file = imgFile;
+    }
+    console.log(IDcardListObject);
+  });
+
+  $(".upload-IDcard .submit-btn").click(function(event) { //提交图片
+    console.log(IDcardListObject);
+    $(".modal-mask").fadeOut();
+    $(".upload-IDcard").fadeOut();
+  });
+
+  //身份证图片上传
+  $(".input-row .select-people-card").click(function(event) {
+    $(".modal-mask").fadeIn();
+    $(".upload-people-card").fadeIn();
+  });
+  var peopleCardObject = {};
+  $(".upload-people-card .add-image-input").change(function(event) {
+    var imgFile = $(this).get(0).files[0];
+    var objecturl = window.URL.createObjectURL(imgFile);
+    $(this).siblings('.upload-text').css('display', 'none');
+    $(this).siblings('img').attr('src', objecturl).addClass('upload-selected-img');
+    console.log($(this).data('name'));
+    peopleCardObject.name = imgFile.name;
+    peopleCardObject.value = $(this).val();
+    peopleCardObject.file = imgFile;
+  });
+
+  $(".upload-people-card .submit-btn").click(function(event) { //提交图片
+    console.log(peopleCardObject);
+    $(".modal-mask").fadeOut();
+    $(".upload-people-card").fadeOut();
+  });
+
+  //选择公司类别
+  $(".buyer-form .select-company-type").click(function(event) {
+    $(".modal-mask").fadeIn();
+    $(".select-company-type-modal").fadeIn();
+    companyTypeFun();
+  });
+
+  var companyTypeFun = function() {
+    // 公司类别
+    var companyTypeDom = document.querySelector('#company-type-warp');
+    companyTypeBS = new BScroll(companyTypeDom, {
+      wheel: {
+        selectedIndex: $("#company-type-warp .selected").index()
+      }
+    });
+    companyTypeBS.on('scrollEnd', function() {
+      $("#company-type-warp li").removeClass('selected');
+      $("#company-type-warp li").eq(companyTypeBS.getSelectedIndex()).addClass('selected');
+    });
+  };
+
+  $(".select-company-type-modal .top-nav .cancel").click(function(event) {
+    $(".modal-mask").fadeOut();
+    $(".select-company-type-modal").fadeOut();
+  });
+
+  $(".select-company-type-modal .top-nav .sure").click(function(event) {
+    var companyTypeText = $("#company-type-warp .selected").text();
+    $(".buyer-form input[name='companyType']").val(companyTypeText);
+    $(".modal-mask").fadeOut();
+    $(".select-company-type-modal").fadeOut();
+  });
+
+  //选择产品类别
+  $(".buyer-form .select-product-type").click(function(event) {
+    $(".modal-mask").fadeIn();
+    $(".select-product-type-modal").fadeIn();
+    productTypeFun();
+  });
+
+  var productTypeFun = function() {
+    // 产品类别
+    var productTypeDom = document.querySelector('#product-type-warp');
+    productTypeBS = new BScroll(productTypeDom, {
+      wheel: {
+        selectedIndex: $("#product-type-warp .selected").index()
+      }
+    });
+    productTypeBS.on('scrollEnd', function() {
+      $("#product-type-warp li").removeClass('selected');
+      $("#product-type-warp li").eq(productTypeBS.getSelectedIndex()).addClass('selected');
+    });
+  };
+
+  $(".select-product-type-modal .top-nav .cancel").click(function(event) {
+    $(".modal-mask").fadeOut();
+    $(".select-product-type-modal").fadeOut();
+  });
+
+  $(".select-product-type-modal .top-nav .sure").click(function(event) {
+    var productTypeText = $("#product-type-warp .selected").text();
+    $(".buyer-form input[name='productType']").val(productTypeText);
+    $(".modal-mask").fadeOut();
+    $(".select-product-type-modal").fadeOut();
+  });
+
+  //选择公司性质
+  $(".buyer-form .select-company-property").click(function(event) {
+    $(".modal-mask").fadeIn();
+    $(".select-company-property-modal").fadeIn();
+    companyProperty();
+  });
+
+  var companyProperty = function() {
+    // 产品类别
+    var productTypeDom = document.querySelector('#company-property-warp');
+    productTypeBS = new BScroll(productTypeDom, {
+      wheel: {
+        selectedIndex: $("#company-property-warp .selected").index()
+      }
+    });
+    productTypeBS.on('scrollEnd', function() {
+      $("#company-property-warp li").removeClass('selected');
+      $("#company-property-warp li").eq(productTypeBS.getSelectedIndex()).addClass('selected');
+    });
+  };
+
+  $(".select-company-property-modal .top-nav .cancel").click(function(event) {
+    $(".modal-mask").fadeOut();
+    $(".select-company-property-modal").fadeOut();
+  });
+
+  $(".select-company-property-modal .top-nav .sure").click(function(event) {
+    var productTypeText = $("#company-property-warp .selected").text();
+    $(".buyer-form input[name='companyProperty']").val(productTypeText);
+    $(".modal-mask").fadeOut();
+    $(".select-company-property-modal").fadeOut();
+  });
+
+  // 买手显示更多表单
+  $(".buyer-form .push-info p").click(function(event) {
+    $(".buyer-form .push-info p i").addClass('rotate-90');
+    $(".buyer-form .more-info").slideDown("slow");
+  });
+
+  // 登陆提示modal
+  $(".show-remind-login-modal").click(function(event) {
+    $("body").addClass('overflow-hidden');
+    $(".modal-mask").fadeIn();
+    $(".remind-login-modal").fadeIn();
+  });
+
+  // 同意事项modal
+  $(".show-privacy-modal").click(function(event) {
+    $("body").addClass('overflow-hidden');
+    $(".modal-mask").fadeIn();
+    $(".privacy-modal").fadeIn();
+  });
+
+  $(".agree-btn-group span").click(function(event) {
+    $("body").removeClass('overflow-hidden');
+    $(".modal-mask").fadeOut();
+    $(".privacy-modal").fadeOut();
+  });
+
+  // 设计师联系方式modal
+  $(".need-he").click(function(event) {
+    $("body").addClass('overflow-hidden');
+    $(".modal-mask").fadeIn();
+    $(".designer-content-modal").fadeIn();
+  });
+
+  $(".agree-btn-group span").click(function(event) {
+    $("body").removeClass('overflow-hidden');
+    $(".modal-mask").fadeOut();
+    $(".privacy-modal").fadeOut();
+  });
+
+  // 提交订单
+  $(".shop-box").on('click', ' .submit-btn', function(event) {
+    $("body").addClass('overflow-hidden');
+    $(".modal-mask").fadeIn();
+    $(".shop-box .modal-push-order").fadeIn();
+  });
+
+  //点击选择付款
+  $(".pay-content").on('click', '.pay-type', function(event) {
+    $("body").addClass('overflow-hidden');
+    $(".modal-mask").fadeIn();
+    $(".pay-result-modal").fadeIn();
+    $(".pay-type .select-btn").removeClass('selected');
+    $(this).children('.select-btn').addClass('selected');
+  });
+
+  // 点击蒙版
+  $(".modal-mask").click(function(event) {
+    $(".modal-mask").fadeOut();
+    $(".modal").fadeOut();
+  });
+});

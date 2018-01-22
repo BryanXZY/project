@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 移动端meta设置 -->
+  <meta content="page-content" name="activity.mainstory">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 禁止微信内置X5横屏 -->
+  <meta name="x5-orientation" content="portrait">
+
+  <title>my</title>
+
+  <!-- 主要css加载 -->
+  <link rel="stylesheet" href="common/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="common/swiper.css">
+
+
+  <!-- 主要js加载 -->
+  <script src="common/jquery.min.js"></script>
+  <script src="common/fastclick.js"></script>
+  <script src="common/swiper.jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body id="myPage">
+  <div class="page-top-nav">
+    <span class="back">
+      <img src="image/back.png" alt="">
+    </span>
+    <span class="search-btn">
+        <img src="image/search.png" alt="">
+    </span>
+    <span class="search-input">
+        <input type="text" name="" value="" placeholder="请输入关键词，商品编号">
+        <i class="fa fa-remove" aria-hidden="true"></i>
+    </span>
+    <span class="wish-icon">
+        <img src="image/wish.png" alt="">
+        <span class="wish-icon-num"><small>11</small></span>
+    </span>
+  </div>
+
+  <div class="address-list">
+    <div class="address-box">
+      <p class="user-name">张小飞<span class="user-phone">13817111886</span></p>
+      <p class="user-address">上海上海市闵行区七宝镇288号闵行世纪大厦423室</p>
+      <p class="user-company">新辰贸易有限公司</p>
+      <div class="icon-group">
+        <span class="icon-select">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </span>
+        <span class="icon-edit">
+          <img src="image/edit-grap.png" alt="">
+        </span>
+        <span class="icon-del">
+          <img src="image/delete-grap.png" alt="">
+        </span>
+      </div>
+    </div>
+    <div class="address-box">
+      <p class="user-name">张小飞<span class="user-phone">13817111886</span></p>
+      <p class="user-address">上海上海市闵行区七宝镇288号闵行世纪大厦423室</p>
+      <p class="user-company">新辰贸易有限公司</p>
+      <div class="icon-group">
+        <span class="icon-select">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </span>
+        <span class="icon-edit">
+          <img src="image/edit-grap.png" alt="">
+        </span>
+        <span class="icon-del">
+          <img src="image/delete-grap.png" alt="">
+        </span>
+      </div>
+    </div>
+    <div class="address-box">
+      <p class="user-name">张小飞<span class="user-phone">13817111886</span></p>
+      <p class="user-address">上海上海市闵行区七宝镇288号闵行世纪大厦423室</p>
+      <p class="user-company">新辰贸易有限公司</p>
+      <div class="icon-group">
+        <span class="icon-select">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </span>
+        <span class="icon-edit">
+          <img src="image/edit-grap.png" alt="">
+        </span>
+        <span class="icon-del">
+          <img src="image/delete-grap.png" alt="">
+        </span>
+      </div>
+    </div>
+    <div class="address-box">
+      <p class="user-name">张小飞<span class="user-phone">13817111886</span></p>
+      <p class="user-address">上海上海市闵行区七宝镇288号闵行世纪大厦423室</p>
+      <p class="user-company">新辰贸易有限公司</p>
+      <div class="icon-group">
+        <span class="icon-select">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </span>
+        <span class="icon-edit">
+          <img src="image/edit-grap.png" alt="">
+        </span>
+        <span class="icon-del">
+          <img src="image/delete-grap.png" alt="">
+        </span>
+      </div>
+    </div>
+    <div class="address-box">
+      <p class="user-name">张小飞<span class="user-phone">13817111886</span></p>
+      <p class="user-address">上海上海市闵行区七宝镇288号闵行世纪大厦423室</p>
+      <p class="user-company">新辰贸易有限公司</p>
+      <div class="icon-group">
+        <span class="icon-select">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </span>
+        <span class="icon-edit">
+          <img src="image/edit-grap.png" alt="">
+        </span>
+        <span class="icon-del">
+          <img src="image/delete-grap.png" alt="">
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div id="add-address" class="add-new-adress">
+    新增收货地址
+  </div>
+
+  <div class="page-footer-nav">
+    <ul>
+      <li>
+        <a href="">
+          <img src="image/home.png" alt="">
+          <span class="page-name">主页</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/new.png" alt="">
+          <span class="page-name">新品</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/designer.png" alt="">
+          <span class="page-name">设计师</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/user.png" alt="">
+          <span class="page-name">我的</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="modal-mask"></div>
+  <div class="edit-address-modal modal">
+    <div class="title">修改地址</div>
+    <div class="inputs">
+      <input type="text" class="text-input" placeholder="填写收货人">
+      <input type="text" class="text-input" placeholder="联系电话">
+      <input type="text" class="text-input" placeholder="填写收货地址">
+    </div>
+    <div class="save-btn">保存</div>
+  </div>
+</body>
+
+</html>

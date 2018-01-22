@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 移动端meta设置 -->
+  <meta content="page-content" name="activity.mainstory">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 禁止微信内置X5横屏 -->
+  <meta name="x5-orientation" content="portrait">
+
+  <title>my</title>
+
+  <!-- 主要css加载 -->
+  <link rel="stylesheet" href="common/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="common/swiper.css">
+  
+  <style>
+    .page-top-nav{
+        border-bottom: 1px solid #eee;
+        
+    }
+
+    .main-container{
+        padding: 0 5.9375vw;
+        padding-top: 13.28vw;
+    }
+
+    .info-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 18.75vw;
+        border-bottom: 1px solid #ac9c83;
+        background-image: url('image/to.png');
+        background-size: 2.03125vw 2.8125vw;
+        background-repeat: no-repeat;
+        background-position: right 0px top 50%;
+    }
+
+    .info-content .avatar{
+        height: 14.0625vw;
+        width: 14.0625vw;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        border: 1px solid #ac9c83;
+        margin-right: 6vw;
+    }
+
+    .page-title{
+        position: absolute;
+        top: 23px;
+        left: 55px;
+    }
+
+    .modal{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: 101;
+        overflow: hidden;
+        display: none;
+    }
+
+    .modal .overlay{
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0,0,0, .8);
+    }
+
+    .modal .modal-content{
+        position: absolute;
+        top: 31vw;
+        height: 60vw;
+        width: 58.4375vw;
+        background-color: #e6e6e6;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 3px;
+    }
+
+    .modal .modal-content .modal-header{
+        text-align: center;
+        font-size: 12px;
+        height: 9.6875vw;
+        line-height: 9.6875vw;
+        background-color: #c7c7c7;
+    }
+
+    .modal .modal-content .modal-body{
+        padding: 7.03125vw 5.78125vw 0px;
+    }
+
+    .modal .modal-content .modal-body .nickname{
+        box-sizing: border-box;
+        height: 7.8125vw;
+        background-color: #ddd;
+        padding: 10px;
+        margin-bottom: 14.6875vw;
+        width: 100%;
+    }
+
+    .modal .modal-content .modal-body .nickname-content{
+        position: relative;
+    }
+
+    .modal .modal-content .modal-body .nickname-content.warning::after{
+        direction: block;
+        position: absolute;
+        top: 10vw;
+        left: 0px;
+        font-size: 12px;
+        content: '昵称已存在';
+        padding-left: 5vw;
+        background-image: url("image/warning.jpg");
+        background-repeat: no-repeat;
+        background-size: 4.375vw;
+        color: #fb0000;
+        height: 4.375vw;
+    }
+
+    .modal .modal-content .modal-body .modal-button{
+        height: 10vw;
+        line-height: 10vw;
+        color: #fff;
+        text-align: center;
+        background-color: #ac9c83;
+
+    }
+  </style>
+
+  <!-- 主要js加载 -->
+  <script src="common/jquery.min.js"></script>
+  <script src="common/fastclick.js"></script>
+  <script src="common/swiper.jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body id="myPage">
+  <div class="page-top-nav">
+    <span class="back">
+      <img src="image/back.png" alt="">
+    </span>
+    <span class="page-title">个人资料</span>
+    <span class="search-btn">
+        <img src="image/search.png" alt="">
+    </span>
+    <span class="search-input">
+        <input type="text" name="" value="" placeholder="请输入关键词，商品编号">
+        <i class="fa fa-remove" aria-hidden="true"></i>
+    </span>
+    <span class="wish-icon">
+        <img src="image/wish.png" alt="">
+        <span class="wish-icon-num"><small>11</small></span>
+    </span>
+  </div>
+
+  <div class="main-container">
+    <div class="info-content">
+        <div class="info-key">会员头像</div>
+        <div class="avatar" style="background-image: url('./image/designer1.png');"></div>
+    </div>
+    <div id="setNickname" class="info-content">
+        <div class="info-key">昵称</div>
+    </div>
+  </div>
+
+  <div class="page-footer-nav">
+    <ul>
+      <li>
+        <a href="">
+          <img src="image/home.png" alt="">
+          <span class="page-name">主页</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/new.png" alt="">
+          <span class="page-name">新品</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/designer.png" alt="">
+          <span class="page-name">设计师</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/user.png" alt="">
+          <span class="page-name">我的</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="modal-mask"></div>
+  <div class="edit-address-modal modal">
+    <div class="title">修改地址</div>
+    <div class="inputs">
+      <input type="text" class="text-input" placeholder="填写收货人">
+      <input type="text" class="text-input" placeholder="联系电话">
+      <input type="text" class="text-input" placeholder="填写收货地址">
+    </div>
+    <div class="save-btn">保存</div>
+  </div>
+  <div id="nickname-modal" class="modal">
+    <div class="overlay"></div>
+    <div class="modal-content">
+        <div class="modal-header">昵称修改</div>
+        <div class="modal-body">
+            <div class="nickname-content warning">
+                <input type="text" class="nickname" value="Johny vino"/>
+            </div>
+            <div class="modal-button">保存</div>
+        </div>
+    </div>
+  </div>
+
+  <script>
+      $('#setNickname').on('click', function() {
+          $('#nickname-modal').fadeIn();
+      })
+
+      $('.modal-button').on('click', function() {
+          $('#nickname-modal').fadeOut();
+      })
+  </script>
+</body>
+
+</html>

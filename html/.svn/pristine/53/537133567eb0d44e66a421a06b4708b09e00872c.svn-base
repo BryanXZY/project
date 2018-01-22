@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 移动端meta设置 -->
+  <meta content="page-content" name="activity.mainstory">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 禁止微信内置X5横屏 -->
+  <meta name="x5-orientation" content="portrait">
+
+  <title>my</title>
+
+  <!-- 主要css加载 -->
+  <link rel="stylesheet" href="common/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="common/swiper.css">
+
+
+  <!-- 主要js加载 -->
+  <script src="common/jquery.min.js"></script>
+  <script src="common/fastclick.js"></script>
+  <script src="common/swiper.jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body id="orderPage">
+  <div class="page-top-nav">
+    <span class="back">
+      <img src="image/back.png" alt="">
+    </span>
+    <span class="search-btn">
+        <img src="image/search.png" alt="">
+    </span>
+    <span class="search-input">
+        <input type="text" name="" value="" placeholder="请输入关键词，商品编号">
+        <i class="fa fa-remove" aria-hidden="true"></i>
+    </span>
+    <span class="wish-icon">
+        <img src="image/wish.png" alt="">
+        <span class="wish-icon-num"><small>11</small></span>
+    </span>
+  </div>
+
+  <div class="buyer-info-box margin-top-nav address-selected">
+    <img class="address-icon" src="image/address-lg.png" alt="">
+    <div class="buyer-info">
+      <div>
+        <span class="buyer-name">收货人：张小飞</span>
+        <span class="buyer-phone">13817111886</span>
+      </div>
+      <p class="buyer-address">上海上海市闵行区七宝镇288号闵行世纪大厦423室</p>
+      <p class="buyer-company">新辰贸易有限公司</p>
+      <span class="link-icon">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="buyer-info-box">
+    <img class="address-icon" src="image/address-lg.png" alt="">
+    <div class="buyer-info">
+      <div>
+        <span class="buyer-name">收货人：张小飞</span>
+        <span class="buyer-phone">13817111886</span>
+      </div>
+      <p class="buyer-address">上海上海市闵行区七宝镇288号闵行世纪大厦423室</p>
+      <p class="buyer-company">新辰贸易有限公司</p>
+      <span class="link-icon">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+
+  <div class="order-info">
+    <div class="oreder-create-time">
+      <p>2017/08/16<span>待付款</span></p>
+    </div>
+    <div class="product-info">
+      <div class="sale-tag">
+        <span class="tag-icon">满减</span><span class="tag-name">订购满1000减订单8折优惠</span>
+      </div>
+      <img src="image/order-img.jpg" alt="">
+      <div class="product-info-box">
+        <p class="product-no">CT-NT1345</p>
+        <p class="product-name">城市系列女童毛呢斗篷</p>
+        <p class="product-color-size">颜色：深灰 / 尺寸 110-150</p>
+        <p class="product-price"><span class="price-num">￥359</span><span class="sale-num">x 300件</span></p>
+        <p class="product-sale-price">￥359</p>
+        <p class="product-all-price">共<span>1600</span>件商品  小计：<span class="all-price-num">￥340,340</span></p>
+        <p class="product-sale-text">已优惠<span>￥340</span></p>
+      </div>
+    </div>
+
+    <div class="oreder-create-time">
+      <p>2017/08/16<span>待付款</span></p>
+    </div>
+    <div class="product-info">
+      <img src="image/order-img.jpg" alt="">
+      <div class="product-info-box">
+        <p class="product-no">CT-NT1345</p>
+        <p class="product-name">城市系列女童毛呢斗篷</p>
+        <p class="product-color-size">颜色：深灰 / 尺寸 110-150</p>
+        <p class="product-price"><span class="price-num">￥359</span><span class="sale-num">x 300件</span></p>
+        <p class="product-sale-price">￥359</p>
+        <p class="product-all-price">共<span>1600</span>件商品  小计：<span class="all-price-num">￥340,340</span></p>
+      </div>
+    </div>
+    <div class="info-tit">
+      <p>售后服务</p>
+      <span>关于售后服务的文字<i class="fa fa-angle-right" aria-hidden="true"></i></span>
+    </div>
+    <div class="info-tit">
+      <p>配送方式</p>
+      <span>快递<i class="fa fa-angle-right" aria-hidden="true"></i></span>
+    </div>
+    <div class="info-tit">
+      <label for="">备注: </label>
+      <input type="text" name="" value="" placeholder="选填，买家对本订单的要求及其他">
+    </div>
+  </div>
+
+  <div class="sumbit-order">
+    <div class="order-price">
+      合计：<span>￥10,456</span><small>(含运费：￥35.00)</small>
+    </div>
+    <div class="submit-btn">提交订单</div>
+  </div>
+
+  <div class="page-footer-nav">
+    <ul>
+      <li>
+        <a href="">
+          <img src="image/home.png" alt="">
+          <span class="page-name">主页</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/new.png" alt="">
+          <span class="page-name">新品</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/designer.png" alt="">
+          <span class="page-name">设计师</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/user.png" alt="">
+          <span class="page-name">我的</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

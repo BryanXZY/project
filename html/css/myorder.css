@@ -1,0 +1,141 @@
+.pay-content{
+    overflow: hidden;
+    background-color: #eee;
+    padding-bottom: 13.4vw;
+}
+
+.order-container{
+    margin-top: 2.5vw;
+    background-color: #fff;
+}
+.order-header{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8.75vw;
+    padding: 3.125vw 5.625vw;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.order-date{
+    font-size: 3.2vw;
+    /* font-weight: 600; */
+}
+
+.order-status{
+    color: #b39a86;
+    font-size: 3.2vw;
+}
+
+.order-item{
+    display: flex;
+    margin-bottom: 5px;
+    /* padding: 2.34375vw; */
+}
+
+.order-item-wraper:first-child{
+    width: 32vw;
+    text-align: center;
+    padding: 2.34375vw;
+}
+
+.sku-img{
+    width: 27.96875vw;
+}
+
+.order-item-wraper:nth-child(2){
+    
+    width: 44.5vw;
+    padding-top: 2.34375vw;
+    font-size: 3.2vw;
+    line-height: 18px;
+}
+
+.order-item-wraper:nth-child(3){
+    flex: 1;
+    padding-top: 2.34375vw;
+}
+
+.order-item-wraper{
+    background-color: #fbfbfb;
+}
+
+.sku-type{
+    color: #b3b3b3;
+}
+
+.sku-price{
+    font-size: 4vw;
+    font-weight: 600;
+}
+
+.sku-num{
+    color: #b3b3b3;
+    font-size: 3.2vw;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.total{
+    font-size: 3vw;
+    border-bottom: 1px solid #dbdbdb;
+    text-align: right;
+    padding: 3.125vw;
+}
+
+span.small{
+    font-size: 2.6vw;
+    padding-right: 2.67vw;
+    /* transform: scale(.8); */
+}
+
+.jindu-container{
+    position: relative;
+    height: 11.25vw;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.jindu-container.check-jindu:after{
+    opacity: 1;
+}
+
+.jindu-container:after{
+    display: block;
+    position: absolute;
+    top: 0;
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-image: url('../image/jindu.jpg');
+    background-size: 100%;
+    opacity: 0;
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    font-size: 3.2vw;
+    padding: 0 7.5vw 0 6.25vw;
+    
+}
+
+.left-btn img{
+    width: 1.5625vw;
+    margin-left: 5px;
+}
+
+.tuoyuan-btn{
+    display: inline-block;
+    height: 5.15vw;
+    line-height: 5.15vw;
+    padding: 0 2.5vw;
+    border: 1px solid #c4b0a1;
+    border-radius: 5.15vw;
+    color: #c4b0a1;
+    margin-left: 3.125vw;
+    
+}

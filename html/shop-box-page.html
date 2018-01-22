@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 移动端meta设置 -->
+  <meta content="page-content" name="activity.mainstory">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 禁止微信内置X5横屏 -->
+  <meta name="x5-orientation" content="portrait">
+
+  <title>wish</title>
+
+  <!-- 主要css加载 -->
+  <link rel="stylesheet" href="common/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/font-awesome/css/font-awesome.min.css">
+
+
+  <!-- 主要js加载 -->
+  <script src="common/jquery.min.js"></script>
+  <script src="common/fastclick.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body id="wishPage">
+  <div class="wish-top-nav">
+    <img class="edit-icon" src="image/edit.png" alt="">
+    <div class="wish-tab">
+      <span data-tab="shop" class="active">购物袋</span>
+      <span data-tab="wish">愿望清单</span>
+    </div>
+    <img class="delete-icon" src="image/delete-black.png" alt="">
+  </div>
+
+  <div class="shop-box content-box">
+    <div class="shop-tit">
+      <span class="all-select">全选</span>
+      <p>N件包袋单品</p>
+    </div>
+
+    <div class="shop-sku-list">
+
+      <div class="sku-box">
+        <span class="select-circle">
+          <img src="image/select-true.png" alt="">
+        </span>
+        <img class="sku-img" src="image/sku.png" alt="">
+
+        <div class="sku-info">
+          <img class="edit-icon" src="image/edit-grap.png" alt="">
+          <div class="sku-num">CT-NT1345</div>
+          <div class="sku-name">城市系列女童毛呢斗篷</div>
+          <div class="sku-type">深灰 / 110-150</div>
+          <div>
+            <span class="sku-price">￥359</span>
+            <span class="sku-stock">x 200</span>
+          </div>
+        </div>
+
+        <div class="edit-sku">
+          <div class="edit-sku-num">
+            <span class="down-btn">-</span>
+            <span class="num">20<span class="max-num">/50件</span></span>
+            <span class="add-btn">+</span>
+          </div>
+          <div class="type-select">
+            <span>深灰色</span>
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            <div class="type-select-list">
+              <ul>
+                <li>黑灰色</li>
+                <li>金银色</li>
+                <li>浅绿色</li>
+                <li>黑灰色</li>
+                <li>金银色</li>
+                <li>浅绿色</li>
+                <li>天空蓝</li>
+              </ul>
+            </div>
+          </div>
+          <div class="finish-btn">
+            完 成
+          </div>
+        </div>
+      </div>
+
+      <div class="sku-box">
+        <span class="select-circle">
+                <img src="image/select-true.png" alt="">
+              </span>
+        <img class="sku-img" src="image/sku.png" alt="">
+
+        <div class="sku-info">
+          <img class="edit-icon" src="image/edit-grap.png" alt="">
+          <div class="sku-num">CT-NT1345</div>
+          <div class="sku-name">城市系列女童毛呢斗篷</div>
+          <div class="sku-type">深灰 / 110-150</div>
+          <div>
+            <span class="sku-price">￥359</span>
+            <span class="sku-stock">x 200</span>
+          </div>
+        </div>
+
+        <div class="edit-sku">
+          <div class="edit-sku-num">
+            <span class="down-btn">-</span>
+            <span class="num">20<span class="max-num">/50件</span></span>
+            <span class="add-btn">+</span>
+          </div>
+          <div class="type-select">
+            <span>深灰色</span>
+            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            <div class="type-select-list">
+              <ul>
+                <li>黑灰色</li>
+                <li>金银色</li>
+                <li>浅绿色</li>
+                <li>黑灰色</li>
+                <li>金银色</li>
+                <li>浅绿色</li>
+                <li>天空蓝</li>
+              </ul>
+            </div>
+          </div>
+          <div class="finish-btn">
+            完 成
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sku-balance">
+      <p class="balance-price">总结：<span class="price-num">￥10,987</span></p>
+      <p class="balance-text">（不含有可能尝试的税费及配送费）</p>
+      <div class="submit-btn">
+        进入结算
+      </div>
+    </div>
+
+    <div class="modal-push-order modal">
+      <div class="modal-box">
+        <span class="icon">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </span>
+        <p>订单已提交，等待审核</p>
+        <p class="order-num">订单编号：NB7654221</p>
+        <div class="link-to-order">
+          请到我的账户中查看订单进度！
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer-nav">
+    <ul>
+      <li>
+        <a href="">
+          <img src="image/home.png" alt="">
+          <span class="page-name">主页</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/new.png" alt="">
+          <span class="page-name">新品</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/designer.png" alt="">
+          <span class="page-name">设计师</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/user.png" alt="">
+          <span class="page-name">我的</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="modal-mask"></div>
+</body>
+
+</html>

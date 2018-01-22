@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 移动端meta设置 -->
+  <meta content="page-content" name="activity.mainstory">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 禁止微信内置X5横屏 -->
+  <meta name="x5-orientation" content="portrait">
+
+  <title>wish</title>
+
+  <!-- 主要css加载 -->
+  <link rel="stylesheet" href="common/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/font-awesome/css/font-awesome.min.css">
+
+
+  <!-- 主要js加载 -->
+  <script src="common/jquery.min.js"></script>
+  <script src="common/fastclick.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body id="wishPage">
+  <div class="wish-top-nav">
+    <img class="edit-icon" src="image/edit.png" alt="">
+    <div class="wish-tab">
+      <span data-tab="shop">购物袋</span>
+      <span data-tab="wish" class="active">愿望清单</span>
+    </div>
+    <img class="delete-icon" src="image/delete-black.png" alt="">
+  </div>
+
+  <div class="wish-box content-box">
+    <div class="wish-tit">
+      <p>N件愿望商品</p>
+    </div>
+    <div class="wish-list">
+      <div class="wish-info off-sale">
+        <img src="image/sku.png" alt="">
+        <p class="off-sale-text">已下架</p>
+      </div>
+      <div class="wish-info">
+        <img src="image/sku.png" alt="">
+        <div class="sku-stock">
+          200/2000
+        </div>
+        <div class="text-info">
+          <p class="sku-num">
+            CT-NT1345
+          </p>
+          <p class="sku-price">
+            ￥359
+          </p>
+          <p class="sku-type">
+            迷彩 / 110-150
+          </p>
+          <div class="edit-icon">
+            <span class="add">
+                <img src="image/wish.png" alt="">
+            </span>
+            <span class="delete">
+                <img src="image/wish-delete.png" alt="">
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="wish-info">
+        <img src="image/sku.png" alt="">
+        <div class="sku-stock">
+          200/2000
+        </div>
+        <div class="text-info">
+          <p class="sku-num">
+            CT-NT1345
+          </p>
+          <p class="sku-price">
+            ￥359
+          </p>
+          <p class="sku-type">
+            迷彩 / 110-150
+          </p>
+          <div class="edit-icon">
+            <span class="add">
+                <img src="image/wish.png" alt="">
+            </span>
+            <span class="delete">
+                <img src="image/wish-delete.png" alt="">
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="wish-info">
+        <img src="image/sku.png" alt="">
+        <div class="sku-stock">
+          200/2000
+        </div>
+        <div class="text-info">
+          <p class="sku-num">
+            CT-NT1345
+          </p>
+          <p class="sku-price">
+            ￥359
+          </p>
+          <p class="sku-type">
+            迷彩 / 110-150
+          </p>
+          <div class="edit-icon">
+            <span class="add">
+                <img src="image/wish.png" alt="">
+            </span>
+            <span class="delete">
+                <img src="image/wish-delete.png" alt="">
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer-nav">
+    <ul>
+      <li>
+        <a href="">
+          <img src="image/home.png" alt="">
+          <span class="page-name">主页</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/new.png" alt="">
+          <span class="page-name">新品</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/designer.png" alt="">
+          <span class="page-name">设计师</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/user.png" alt="">
+          <span class="page-name">我的</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="modal-mask"></div>
+</body>
+
+</html>

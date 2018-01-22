@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 移动端meta设置 -->
+  <meta content="page-content" name="activity.mainstory">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 禁止微信内置X5横屏 -->
+  <meta name="x5-orientation" content="portrait">
+
+  <title>question</title>
+
+  <!-- 主要css加载 -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/font-awesome/css/font-awesome.min.css">
+
+  <!-- 主要js加载 -->
+  <script src="common/jquery.min.js"></script>
+  <script src="common/fastclick.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+  <!-- 外层包裹层 -->
+  <div class="layer">
+    <!-- 移动端顶部logo -->
+    <div class="mobie-logo">
+      <img src="image/750x216.png" alt="">
+    </div>
+
+    <!-- 移动端背景图 -->
+    <div class="mobie-background"></div>
+
+    <!-- pc端顶部logo -->
+    <div class="pc-logo">
+      <img src="image/1920x216.png" alt="">
+    </div>
+
+    <!-- pc端背景图 -->
+    <div class="pc-background"></div>
+
+    <div class="question-content">
+      <div class="question-box">
+          <div class="question-tit">
+            <span name="SCQ">单选题：</span>
+            <span name="MCQ">多选题：</span>
+            <span name="TOF">判断题：</span>
+            <span name="CLOZE">填空题：</span>
+          </div>
+          <div class="question-text">
+
+          </div>
+          <div class="question-image">
+
+          </div>
+          <div class="question-options-list">
+            <ul>
+
+            </ul>
+          </div>
+          <div class="question-answer-input display-none">
+            <input type="text" name="" value="">
+          </div>
+          <div class="question-footer">
+            <span class="question-result"></span>
+            <span class="make-sure">确认</span>
+            <span class="next-btn display-none">下一题</span>
+            <span class="finish-btn display-none">提交答案</span>
+          </div>
+      </div>
+      <div class="result display-none">
+        <ul>
+          <li>答题结果：</li>
+          <li>总题数：<span class="allNum"></span></li>
+          <li>答对：<span class="trueNum"></span></li>
+          <li>答错：<span class="falseNum"></span></li>
+          <li>正确率：<span class="lv"></span></li>
+        </ul>
+        <div class="close">
+          <span>关闭</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

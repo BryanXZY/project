@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 移动端meta设置 -->
+  <meta content="page-content" name="activity.mainstory">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 禁止微信内置X5横屏 -->
+  <meta name="x5-orientation" content="portrait">
+
+  <title>signup</title>
+
+  <!-- 主要css加载 -->
+  <link rel="stylesheet" href="common/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/font-awesome/css/font-awesome.min.css">
+
+
+  <!-- 主要js加载 -->
+  <script src="common/jquery.min.js"></script>
+  <script src="common/fastclick.js"></script>
+  <script src="common/bscroll.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body id="signupPage">
+  <div class="select-top-nav">
+    <span data-name="designer" class="designer-btn">设计师</span>
+    <span data-name="buyer" class="active buyer-btn">买手</span>
+  </div>
+
+  <!-- 买手表单 -->
+  <div class="buyer-form form-box">
+    <!--  -->
+    <div class="input-row">
+      <label for="">手机</label>
+      <div class="input-wrapper">
+        <input type="phone" name="" value=""><i class="fa fa-check" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <div class="input-row">
+      <label for="">邮箱</label>
+      <div class="input-wrapper">
+        <input type="email" name="" value="">
+      </div>
+    </div>
+
+    <div class="input-row">
+      <label for="">验证码</label>
+      <div class="input-wrapper">
+        <input style="width:50%;" type="text" name="" value="">
+      </div>
+      <span class="verification">发送验证码</span>
+    </div>
+    <div class="ponit">
+      <span class="icon"><i class="fa fa-exclamation" aria-hidden="true"></i></span>
+      <span class="text">手机与邮箱绑定一个即可，同时填写默认绑定手机。</span>
+    </div>
+    <!--  -->
+    <div class="signup-btn">
+      注册
+    </div>
+    <!--  -->
+    <div class="push-info">
+      <p>
+        上传公司资料，审核通过获得更多会员权益
+        <i class="fa fa-angle-right"></i>
+      </p>
+    </div>
+    <div class="more-info">
+      <div class="input-row">
+        <label for="">法人</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+      <div class="input-row">
+        <label for="">税号</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+      <div class="input-row">
+        <label for="">公司地址</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="">
+        </div>
+      </div>
+      <div class="input-row">
+        <label for="">公司类别</label>
+        <div class="input-wrapper">
+          <input type="text" name="companyType" value="" readonly="ture" onfocus="this.blur()">
+          <i class="fa fa-caret-down select-company-type" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="input-row">
+        <label for="">产品类别</label>
+        <div class="input-wrapper">
+          <input type="text" name="productType" value="" readonly="ture" onfocus="this.blur()">
+          <i class="fa fa-caret-down select-product-type" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="input-row">
+        <label for="">公司性质</label>
+        <div class="input-wrapper">
+          <input type="text" name="companyProperty" value="" readonly="ture" onfocus="this.blur()">
+          <i class="fa fa-caret-down select-company-property" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="input-row">
+        <label for="">上传营业执照</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="" readonly="ture" onfocus="this.blur()" placeholder="">
+          <img class="input-icon select-business-licence" src="./image/upload-false.png" alt="">
+        </div>
+      </div>
+      <div class="input-row">
+        <label for="">上传法人身份证</label>
+        <div class="input-wrapper">
+          <input type="text" name="" value="" readonly="ture" onfocus="this.blur()" placeholder="">
+          <img class="input-icon select-IDcard" src="./image/upload-false.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!--  -->
+  </div>
+
+  <!-- modal蒙版 -->
+  <div class="modal-mask"></div>
+  <!-- 名片上传modal -->
+  <div class="upload-image-modal upload-card upload-people-card">
+    <div class="image-box">
+      <div class="image-list">
+        <span class="box upload-btn">
+            <img src="./image/upload-true.png" alt="">
+            <span class="upload-text">个人名片</span>
+            <input data-name="peopleCard" class="add-image-input" type="file" name="peopleCard" value="" accept="image/*">
+        </span>
+      </div>
+    </div>
+    <div class="submit-btn">
+      提 交
+    </div>
+  </div>
+  <!-- 营业执照上传modal -->
+  <div class="upload-image-modal upload-business-licence">
+    <div class="image-box">
+      <div class="image-list">
+        <span class="box upload-btn">
+            <img src="./image/upload-true.png" alt="">
+            <span class="upload-text">上传营业执照</span>
+        </span>
+        <span class="box add-image-btn">
+            +
+            <input class="add-image-input" type="file" name="up" value="" accept="image/*">
+          </span>
+      </div>
+    </div>
+    <div class="submit-btn">
+      提 交
+    </div>
+  </div>
+  <!-- 身份证上传modal -->
+  <div class="upload-image-modal upload-card upload-IDcard">
+    <div class="image-box">
+      <div class="image-list">
+        <span class="box upload-btn">
+            <img src="./image/upload-true.png" alt="">
+            <span class="upload-text">上传身份证<br />正面</span>
+            <input data-name="front" class="add-image-input" type="file" name="IDcard-front" value="" accept="image/*">
+        </span>
+        <span class="box upload-btn">
+            <img src="./image/upload-true.png" alt="">
+            <span class="upload-text">上传身份证<br />背面</span>
+            <input data-name="back" class="add-image-input" type="file" name="IDcard-back" value="" accept="image/*">
+        </span>
+      </div>
+    </div>
+    <div class="submit-btn">
+      提 交
+    </div>
+  </div>
+  <!-- 选择公司类别 -->
+  <div class="select-modal select-one-modal select-company-type-modal modal">
+    <div class="top-nav">
+      <span class="cancel">取消</span>
+      <span class="sure">确定</span>
+    </div>
+    <div class="select-box">
+      <div id="company-type-warp" class="wrap">
+        <ul class="scroll">
+          <li class="selected">百货</li>
+          <li>超市</li>
+          <li>代理商</li>
+          <li>电商</li>
+          <li>加盟商</li>
+        </ul>
+      </div>
+      <div class="selected-line">
+      </div>
+    </div>
+  </div>
+  <!-- 选择产品类别 -->
+  <div class="select-modal select-one-modal select-product-type-modal modal">
+    <div class="top-nav">
+      <span class="cancel">取消</span>
+      <span class="sure">确定</span>
+    </div>
+    <div class="select-box">
+      <div id="product-type-warp" class="wrap">
+        <ul class="scroll">
+          <li class="selected">男装</li>
+          <li>女装</li>
+          <li>童装</li>
+          <li>休闲服</li>
+          <li>配饰</li>
+        </ul>
+      </div>
+      <div class="selected-line">
+      </div>
+    </div>
+  </div>
+  <!-- 选择业务性质 -->
+  <div class="select-modal select-one-modal select-company-property-modal modal">
+    <div class="top-nav">
+      <span class="cancel">取消</span>
+      <span class="sure">确定</span>
+    </div>
+    <div class="select-box">
+      <div id="company-property-warp" class="wrap">
+        <ul class="scroll">
+          <li class="selected">代理加盟</li>
+          <li>采购订货</li>
+          <li>经营场所招商</li>
+          <li>寻找配套服务</li>
+          <li>市场调研</li>
+        </ul>
+      </div>
+      <div class="selected-line">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 移动端meta设置 -->
+  <meta content="page-content" name="activity.mainstory">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 禁止微信内置X5横屏 -->
+  <meta name="x5-orientation" content="portrait">
+
+  <title>main</title>
+
+  <!-- 主要css加载 -->
+  <link rel="stylesheet" href="common/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="common/swiper.css">
+
+
+  <!-- 主要js加载 -->
+  <script src="common/jquery.min.js"></script>
+  <script src="common/fastclick.js"></script>
+  <script src="common/swiper.jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body id="mainPage">
+  <div class="page-top-nav">
+    <img class="top-logo-img" src="image/top-logo.jpg" alt="">
+    <span class="slider-icon"></span>
+    <span class="search-btn">
+        <img src="image/search.png" alt="">
+    </span>
+    <span class="search-input">
+        <input type="text" name="" value="" placeholder="请输入关键词，商品编号">
+        <i class="fa fa-remove" aria-hidden="true"></i>
+    </span>
+    <span class="wish-icon">
+        <img src="image/wish.png" alt="">
+        <span class="wish-icon-num">11</span>
+    </span>
+  </div>
+
+  <div class="slider-box">
+    <div class="box-left">
+      <div class="select-box">
+        <span>女生</span>
+        <span>男生</span>
+      </div>
+      <div class="select-box">
+        <span>新生儿（1M-18M</span>
+        <span>婴   儿（6M-3Y）</span>
+        <span>小中童（2岁-14岁）</span>
+        <span>大   童（14岁-18岁）</span>
+      </div>
+      <div class="select-box">
+        <span>连体衣</span>
+        <span>套  装</span>
+        <span>连衣裙</span>
+        <span>外   套</span>
+        <span>T  恤</span>
+        <span>衬   衫</span>
+        <span>毛  衣</span>
+        <span>裤  子</span>
+        <span>家  居</span>
+        <span>配   饰</span>
+      </div>
+      <div class="select-box">
+        <span>图   册</span>
+        <span>系   列</span>
+      </div>
+      <div class="slider-left-footer">
+        <span class="reset">重置</span>
+        <span class="finish">完成</span>
+      </div>
+    </div>
+    <div class="box-right">
+      <span class="slider-icon-active"></span>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="scroll-div">
+      <div class="swiper-container main-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="image/main.png" alt="">
+            <span class="link-icon">
+              <i class="fa fa-play" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="swiper-slide">
+            <img src="image/main.png" alt="">
+            <span class="link-icon">
+              <i class="fa fa-play" aria-hidden="true"></i>
+            </span>
+          </div>
+          <div class="swiper-slide">
+            <img src="image/main.png" alt="">
+            <span class="link-icon">
+              <i class="fa fa-play" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+        <div class="swiper-pagination main-swiper-pagination"></div>
+      </div>
+
+      <div class="img-list">
+        <a href="#">
+          <img src="image/swiper-1.png" alt="">
+        </a>
+        <a href="#">
+            <img src="image/swiper-1.png" alt="">
+          </a>
+        <a href="#">
+          <img src="image/swiper-1.png" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer-nav">
+    <ul>
+      <li>
+        <a href="">
+          <img src="image/home.png" alt="">
+          <span class="page-name">主页</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/new.png" alt="">
+          <span class="page-name">新品</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/designer.png" alt="">
+          <span class="page-name">设计师</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/user.png" alt="">
+          <span class="page-name">我的</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+<script type="text/javascript">
+  //首页轮播
+  var mainSwiper = new Swiper('.main-swiper', {
+    pagination: '.main-swiper-pagination',
+    loop : true,
+    autoplay : 3000,
+  })
+</script>
+
+</html>

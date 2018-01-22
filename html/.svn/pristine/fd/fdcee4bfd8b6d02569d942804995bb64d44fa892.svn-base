@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 移动端meta设置 -->
+  <meta content="page-content" name="activity.mainstory">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 禁止微信内置X5横屏 -->
+  <meta name="x5-orientation" content="portrait">
+
+  <title>product</title>
+
+  <!-- 主要css加载 -->
+  <link rel="stylesheet" href="common/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="common/swiper.css">
+
+
+  <!-- 主要js加载 -->
+  <script src="common/jquery.min.js"></script>
+  <script src="common/fastclick.js"></script>
+  <script src="common/swiper.jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body id="productPage">
+  <div class="page-top-nav">
+    <span class="back">
+      <img src="image/back.png" alt="">
+    </span>
+    <span class="search-btn">
+        <img src="image/search.png" alt="">
+    </span>
+    <span class="search-input">
+        <input type="text" name="" value="" placeholder="请输入关键词，商品编号">
+        <i class="fa fa-remove" aria-hidden="true"></i>
+    </span>
+    <span style="right: 6vw;" class="wish-icon">
+        <img style="width:140%;" src="image/hot-active.png" alt="">
+        <span style="background-color:rgb(172, 156, 131);right:-3vw;border:1px solid #fff" class="wish-icon-num">11</span>
+    </span>
+  </div>
+
+  <div class="product-info">
+    <p style="text-align:center" class="product-num">CT-NT1345</p>
+    <p style="text-align:center" class="product-name">城市系列女童毛呢斗篷</p>
+    <p style="text-align:center" class="product-price">￥359</p>
+
+    <div class="sku-swiper swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="image/sku2.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="image/sku2.png" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="image/sku2.png" alt="">
+        </div>
+      </div>
+      <div class="sku-swiper-pagination swiper-pagination"></div>
+    </div>
+
+    <div class="buy-info">
+      <span class="size">100-160</span>
+      <span>/</span>
+      <span class="color">黑色</span>
+      <span>/</span>
+      <span class="num">一手10件</span>
+    </div>
+
+    <div class="product-select">
+      <span class="select-btn">
+        选择尺寸
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </span>
+      <span class="select-box">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        <ul class="select-size-ul">
+          <li>100</li>
+          <li>110</li>
+          <li>120</li>
+          <li>130</li>
+          <li>140</li>
+          <li>150</li>
+          <li>160</li>
+        </ul>
+      </span>
+    </div>
+
+    <div class="product-select">
+      <span class="select-btn">
+        选择颜色
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </span>
+      <span class="select-box">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        <ul class="select-color-ul">
+          <li>藏青色</li>
+          <li>藏青色</li>
+          <li>藏青色</li>
+          <li>藏青色</li>
+          <li>藏青色</li>
+          <li>藏青色</li>
+          <li>藏青色</li>
+        </ul>
+      </span>
+    </div>
+
+    <div class="product-select">
+      <span class="select-btn">
+        选择数量
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </span>
+      <span class="select-box num-box">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+        <span class="down">-</span>
+        <span class="num-box-show">
+          <span class="select-num">1</span>手/<span class="max-num">50</span>件
+        </span>
+        <span class="add">+</span>
+      </span>
+    </div>
+
+    <div class="info-text-box">
+      <div class="add-bag">
+        放入购物袋
+      </div>
+      <div class="add-wish">
+        添加至愿望清单
+      </div>
+      <div class="info-text">
+        <span class="edit">订购指导</span>
+      </div>
+      <div class="product-info-list">
+        <p>产品信息</p>
+        <ul>
+          <li>产品颜色信息</li>
+          <li>产品设计特点，制作工艺信息</li>
+          <li>产品材质信息</li>
+        </ul>
+      </div>
+      <div class="product-info-list">
+        <p>尺码指导</p>
+        <ul>
+          <li>查看此商品尺寸</li>
+          <li>产品设计特点，制作工艺信息</li>
+          <li>产品材质信息</li>
+        </ul>
+      </div>
+      <div class="same-product-list">
+        <p>更多同系列产品推荐</p>
+        <div class="recommend-swiper swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="image/sku2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="image/sku2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="image/sku2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="image/sku2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="image/sku2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="image/sku2.png" alt="">
+            </div>
+              <div class="swiper-slide">
+                <img src="image/sku2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="image/sku2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="image/sku2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="image/sku2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="image/sku2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="image/sku2.png" alt="">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="same-product-info">
+      <div class="fin-order">
+        <p>已完成预定 <span class="order-num">1000</span><span>/</span><span class="order-max-num">2000</span></p>
+      </div>
+      <div class="order-btn">
+        <div class="order-time">
+          <p>2017-19-10 24:00 结束</p>
+          <p>截止日后40天发货</p>
+        </div>
+        <div class="submit-btn">
+          立即预定
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-footer-nav">
+    <ul>
+      <li>
+        <a href="">
+          <img src="image/home.png" alt="">
+          <span class="page-name">主页</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/new.png" alt="">
+          <span class="page-name">新品</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/designer.png" alt="">
+          <span class="page-name">设计师</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/user.png" alt="">
+          <span class="page-name">我的</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+<script type="text/javascript">
+  //顶部产品浏览
+  var skuSwiper = new Swiper('.sku-swiper', {
+    pagination: '.sku-swiper-pagination',
+    loop: true,
+    zoom: true,
+  })
+  //底部产品推荐
+  var skuSwiper = new Swiper('.recommend-swiper', {
+    slidesPerView: 4,
+  })
+</script>
+
+</html>

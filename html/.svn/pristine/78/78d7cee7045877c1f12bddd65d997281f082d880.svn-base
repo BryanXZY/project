@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- 移动端meta设置 -->
+  <meta content="page-content" name="activity.mainstory">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+
+  <!-- 禁止微信内置X5横屏 -->
+  <meta name="x5-orientation" content="portrait">
+
+  <title>product</title>
+
+  <!-- 主要css加载 -->
+  <link rel="stylesheet" href="common/common.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="common/swiper.css">
+
+
+  <!-- 主要js加载 -->
+  <script src="common/jquery.min.js"></script>
+  <script src="common/fastclick.js"></script>
+  <script src="common/swiper.jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body id="productPage">
+  <div class="page-top-nav">
+    <span class="slider-icon"></span>
+    <span class="search-btn">
+        <img src="image/search.png" alt="">
+    </span>
+    <span class="search-input">
+        <input type="text" name="" value="" placeholder="请输入关键词，商品编号">
+        <i class="fa fa-remove" aria-hidden="true"></i>
+    </span>
+    <span class="wish-icon">
+        <img src="image/wish.png" alt="">
+        <span class="wish-icon-num">11</span>
+    </span>
+  </div>
+
+  <div class="slider-box">
+    <div class="box-left">
+      <div class="select-box">
+        <span>女生</span>
+        <span>男生</span>
+      </div>
+      <div class="select-box">
+        <span>新生儿（1M-18M</span>
+        <span>婴   儿（6M-3Y）</span>
+        <span>小中童（2岁-14岁）</span>
+        <span>大   童（14岁-18岁）</span>
+      </div>
+      <div class="select-box">
+        <span>连体衣</span>
+        <span>套  装</span>
+        <span>连衣裙</span>
+        <span>外   套</span>
+        <span>T  恤</span>
+        <span>衬   衫</span>
+        <span>毛  衣</span>
+        <span>裤  子</span>
+        <span>家  居</span>
+        <span>配   饰</span>
+      </div>
+      <div class="select-box">
+        <span>图   册</span>
+        <span>系   列</span>
+      </div>
+      <div class="slider-left-footer">
+        <span class="reset">重置</span>
+        <span class="finish">完成</span>
+      </div>
+    </div>
+    <div class="box-right">
+      <span class="slider-icon-active"></span>
+    </div>
+  </div>
+
+  <div class="product-content">
+    <div class="series-info">
+      <img src="image/series.png" alt="">
+      <p>2017/18秋冬童装色彩趋势，是针2017/18秋冬童装色彩趋势，是针对童装未来的色彩趋势进行指导和预测的一本色彩流行趋势书籍。通过对各大主题进行整合，展示17秋冬色彩ＰＣＣＳ系统数据分析、关键色、色彩搭配等内容，对未来的色彩方向提供切实详尽的指导和预测。让企业更直观的了解色彩流行趋势的变化，服务于不同风格的客户。对童装未来的色彩趋势进行指导和预测的一本色彩流行趋势书籍。通过对各大主题进行整合，展示17秋冬色彩ＰＣＣＳ系统数据分析、关键色、色彩搭配等内容，对未来的色彩方向提供切实详尽的指导和预测。让企业更直观的了解色彩流行趋势的变化，服务于不同风格的客户。</p>
+    </div>
+
+    <div class="logo-line">
+      <img src="image/logo.png" alt="">
+    </div>
+
+    <div class="product-list">
+
+      <div class="product-box">
+        <img src="image/sku.png" alt="">
+        <div class="product-info">
+          <p class="product-num">CT-NT1345</p>
+          <p class="product-name">城市系列女童毛呢斗篷</p>
+          <p class="product-price">￥359</p>
+        </div>
+      </div>
+
+      <div class="product-box">
+        <img src="image/sku.png" alt="">
+        <div class="product-info">
+          <p class="product-num">CT-NT1345</p>
+          <p class="product-name">城市系列女童毛呢斗篷</p>
+          <p class="product-price">￥359</p>
+        </div>
+      </div>
+
+      <div class="product-box">
+        <img src="image/sku.png" alt="">
+        <div class="product-info">
+          <p class="product-num">CT-NT1345</p>
+          <p class="product-name">城市系列女童毛呢斗篷</p>
+          <p class="product-price">￥359</p>
+        </div>
+      </div>
+
+      <div class="product-box">
+        <img src="image/sku.png" alt="">
+        <div class="product-info">
+          <p class="product-num">CT-NT1345</p>
+          <p class="product-name">城市系列女童毛呢斗篷</p>
+          <p class="product-price">￥359</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="page-footer-nav">
+    <ul>
+      <li>
+        <a href="">
+          <img src="image/home.png" alt="">
+          <span class="page-name">主页</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/new.png" alt="">
+          <span class="page-name">新品</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/designer.png" alt="">
+          <span class="page-name">设计师</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <img src="image/user.png" alt="">
+          <span class="page-name">我的</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
